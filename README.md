@@ -18,6 +18,10 @@ Installation
 ------------
 To install this plugin, follow the [Command-line Interface Guide](http://cordova.apache.org/docs/en/edge/guide_cli_index.md.html#The%20Command-line%20Interface).
 
+```
+cordova plugin add cordova-camera-roll
+```
+
 If you are not using the Cordova Command-line Interface, follow [Using Plugman to Manage Plugins](http://cordova.apache.org/docs/en/edge/plugin_ref_plugman.md.html).
 
 Usage
@@ -30,12 +34,12 @@ In Javascript, you can do something like this:
 ```javascript
 
 // Quickly save a base-64 encoded data uri to the cameraroll.
-CamerRoll.saveToCameraRoll(base64String, function() {
+CameraRoll.saveToCameraRoll(base64String, function() {
 }, function(err) {
 });
 
 CameraRoll.getPhotos(function(photo) {
-  // Photo is a URL pointing to the asset. It's prefixed asset-library:// 
+  // Photo is a URL pointing to the asset. It's prefixed assets-library://
   // So if you are using Angular and ng-src, make sure to whitelist this URL scheme.
   //
   // You can use "photo" directly in an img src or as a background-image in CSS.
